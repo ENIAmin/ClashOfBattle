@@ -3,26 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
-
+    app:startDestination="@id/playerListFragment">
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.clashofbattle.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_list_player">
-
+        android:id="@+id/playerListFragment"
+        android:name="com.example.clashofbattle.playerList.PlayerListFragment"
+        android:label="fragment_list_player"
+        tools:layout="@layout/fragment_list_player" >
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_playerListFragment_to_playerEditFragment"
+            app:destination="@id/playerEditFragment" />
     </fragment>
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="com.example.clashofbattle.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_edit_player">
-
+        android:id="@+id/playerEditFragment"
+        android:name="com.example.clashofbattle.playerEdit.PlayerEditFragment"
+        android:label="fragment_edit_player"
+        tools:layout="@layout/fragment_edit_player" >
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_playerEditFragment_to_playerListFragment"
+            app:destination="@id/playerListFragment" />
     </fragment>
 </navigation>

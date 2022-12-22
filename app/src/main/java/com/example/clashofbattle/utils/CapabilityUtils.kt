@@ -1,12 +1,11 @@
-package com.example.democlashofbattle.utils
+package com.example.clashofbattle.utils
 
 import android.content.Context
 import androidx.core.content.res.ResourcesCompat
-import com.example.democlashofbattle.R
-import com.example.democlashofbattle.models.Capability
-import com.example.democlashofbattle.models.CapabilityType
-import com.example.democlashofbattle.models.Job
-import com.example.democlashofbattle.models.Player
+import com.example.clashofbattle.R
+import com.example.clashofbattle.models.Capability
+import com.example.clashofbattle.models.CapabilityType
+
 
 
 fun Capability.getNameId() = when(this) {

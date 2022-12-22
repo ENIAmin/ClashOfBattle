@@ -1,7 +1,7 @@
-package com.example.democlashofbattle.utils
+package com.example.clashofbattle.utils
 
 import androidx.room.TypeConverter
-import com.example.democlashofbattle.models.Capability
+import com.example.clashofbattle.models.Capability
 import com.squareup.moshi.FromJson
 import com.squareup.moshi.ToJson
 

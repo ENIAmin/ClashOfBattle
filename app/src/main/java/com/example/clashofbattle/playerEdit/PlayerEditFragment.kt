@@ -1,4 +1,4 @@
-package com.example.clashofbattle
+package com.example.clashofbattle.playerEdit
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,17 +6,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.clashofbattle.databinding.FragmentFirstBinding
+import com.example.clashofbattle.R
+import com.example.clashofbattle.databinding.FragmentEditPlayerBinding
 
 /**
- * A simple [Fragment] subclass as the default destination in the navigation.
+ * A simple [Fragment] subclass as the second destination in the navigation.
  */
-class FirstFragment : Fragment() {
+class PlayerEditFragment : Fragment() {
 
-    private var _binding: FragmentFirstBinding? = null
+    companion object {
+        const val PLAYER_ID = "PLAYER_ID"
+    }
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
+    private var _binding: FragmentEditPlayerBinding? = null
+
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -24,7 +27,7 @@ class FirstFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        _binding = FragmentFirstBinding.inflate(inflater, container, false)
+        _binding = FragmentEditPlayerBinding.inflate(inflater, container, false)
         return binding.root
 
     }
@@ -32,8 +35,8 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        binding.buttonSecond.setOnClickListener {
+            findNavController().navigate(R.id.action_playerEditFragment_to_playerListFragment)
         }
     }
 
