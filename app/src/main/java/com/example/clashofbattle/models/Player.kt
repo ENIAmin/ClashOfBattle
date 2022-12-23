@@ -15,11 +15,11 @@ data class Player(
 
     val name: String,
     @Json(name = "image_url")
-    val imageUrl: String,
+    var imageUrl: String,
 
-    val capability1: Capability,
-    val capability2: Capability,
-    val capability3: Capability,
+    var capability1: Capability,
+    var capability2: Capability,
+    var capability3: Capability,
 ) {
     val capabilities : List<Capability>
         get() = listOf(

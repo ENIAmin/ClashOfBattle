@@ -1,65 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    >
-
-
-
-
-
-<androidx.cardview.widget.CardView
-
-    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    app:cardCornerRadius="12dp"
-    app:cardElevation="3dp">
+    android:orientation="vertical">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:paddingBottom="16dp"
+    <androidx.cardview.widget.CardView
+
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="3dp">
 
-        <ImageView
-            android:id="@+id/player_image"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-
-        <TextView
-            android:id="@+id/player_name"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="40dp"
-            app:layout_constraintLeft_toRightOf="@+id/player_image"
-            app:layout_constraintTop_toTopOf="@+id/player_image"
-            tools:text="Kratos" />
+            <ImageView
+                android:id="@+id/player_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:padding="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-        <TextView
-            android:id="@+id/player_class"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:textSize="15sp"
-            android:textStyle="italic"
-            android:layout_marginTop="60dp"
-            android:layout_marginLeft="40dp"
-            app:layout_constraintLeft_toRightOf="@+id/player_image"
-            app:layout_constraintTop_toTopOf="@+id/player_image"
-            tools:text="classe: Guerrier" />
+            <TextView
+                android:id="@+id/player_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintLeft_toRightOf="@+id/player_image"
+                app:layout_constraintTop_toTopOf="@+id/player_image"
+                tools:text="Kratos" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
 
-</androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/player_class"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="60dp"
+                android:textSize="15sp"
+                android:textStyle="italic"
+                app:layout_constraintLeft_toRightOf="@+id/player_image"
+                app:layout_constraintTop_toTopOf="@+id/player_image"
+                tools:text="classe: Guerrier" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
 </LinearLayout>

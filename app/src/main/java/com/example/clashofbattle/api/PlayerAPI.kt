@@ -30,7 +30,7 @@ interface PlayerAPI {
     @GET("players.json")
     suspend fun getPlayers() : Map<String, Player>
 
-    @PUT("trips/{id}.json ")
+    @PUT("players/{id}.json ")
     suspend fun updatePlayer(@Path("id") id: String, @Body player: Player) : Player
 
 }

@@ -7,19 +7,26 @@
     <fragment
         android:id="@+id/playerListFragment"
         android:name="com.example.clashofbattle.playerList.PlayerListFragment"
-        android:label="fragment_list_player"
-        tools:layout="@layout/fragment_list_player" >
+        android:label="Liste des joueurs"
+        tools:layout="@layout/fragment_list_player">
         <action
             android:id="@+id/action_playerListFragment_to_playerEditFragment"
             app:destination="@id/playerEditFragment" />
+        <action
+            android:id="@+id/action_playerListFragment_to_combatFragment"
+            app:destination="@id/combatFragment" />
     </fragment>
     <fragment
         android:id="@+id/playerEditFragment"
         android:name="com.example.clashofbattle.playerEdit.PlayerEditFragment"
-        android:label="fragment_edit_player"
-        tools:layout="@layout/fragment_edit_player" >
+        android:label="Modifier le joueur"
+        tools:layout="@layout/fragment_edit_player">
         <action
             android:id="@+id/action_playerEditFragment_to_playerListFragment"
             app:destination="@id/playerListFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/combatFragment"
+        android:name="com.example.clashofbattle.combat.CombatFragment"
+        android:label="Baston !" />
 </navigation>

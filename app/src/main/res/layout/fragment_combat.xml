@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".combat.CombatFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/playerOne"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="3dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/playerOne_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:id="@+id/playerOne_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="40dp"
+                app:layout_constraintLeft_toRightOf="@+id/playerOne_image"
+                app:layout_constraintTop_toTopOf="@+id/playerOne_image"
+                tools:text="Amin" />
+
+            <ProgressBar
+                android:id="@+id/simpleProgressBarOne"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                app:layout_constraintStart_toEndOf="@+id/playerOne_name"
+                app:layout_constraintTop_toTopOf="@id/playerOne_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:max="50"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:background="#000"/>
+
+            <TextView
+                android:id="@+id/playerOne_pv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="5dp"
+                app:layout_constraintRight_toLeftOf="@+id/playerOne_name"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="50/50" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/playerTwo"
+        app:layout_constraintTop_toBottomOf="@id/playerOne"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        app:cardElevation="3dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:paddingBottom="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/player_imageTwo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:id="@+id/player_nameTwo"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="40dp"
+                app:layout_constraintRight_toLeftOf="@+id/player_imageTwo"
+                app:layout_constraintTop_toTopOf="@+id/player_imageTwo"
+                tools:text="Karen" />
+
+            <ProgressBar
+                android:id="@+id/simpleProgressBarTwo"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toStartOf="@+id/player_nameTwo"
+                app:layout_constraintTop_toTopOf="@id/player_nameTwo"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="5dp"
+                android:max="50"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:background="#000"/>
+
+            <TextView
+                android:id="@+id/playerTwo_pv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="5dp"
+                app:layout_constraintLeft_toRightOf="@+id/player_nameTwo"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="50/50" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/round_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="@color/cardview_dark_background"
+        app:layout_constraintTop_toBottomOf="@id/playerTwo"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/fightInfoOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="@color/red"
+        app:layout_constraintTop_toBottomOf="@id/round_count"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/fightInfoTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="15dp"
+        android:textColor="@color/blue"
+        app:layout_constraintTop_toBottomOf="@id/fightInfoOne"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/combat_winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/fightInfoTwo" />
+
+    <Button
+        android:id="@+id/FightButtonNormal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Attaque simple"
+        android:textSize="15dp"
+        android:layout_marginTop="200dp"
+        app:layout_constraintTop_toBottomOf="@id/fightInfoTwo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <Button
+        android:id="@+id/FightButtonOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capacité 1"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/FightButtonNormal"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <Button
+        android:id="@+id/FightButtonTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capacité 2"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/FightButtonOne"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <Button
+        android:id="@+id/FightButtonThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capacité 3"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/FightButtonTwo"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+

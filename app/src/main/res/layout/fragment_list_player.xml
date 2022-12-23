@@ -4,52 +4,52 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    tools:context=".playerList.PlayerListFragment">
 
     <androidx.cardview.widget.CardView
-        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/mainPlayer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        app:cardElevation="3dp">
+        app:cardElevation="3dp"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:paddingBottom="16dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:id="@+id/player_image"
+                android:id="@+id/mainPlayer_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
+                android:padding="10dp"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                />
+                app:layout_constraintTop_toTopOf="parent" />
 
 
             <TextView
-                android:id="@+id/player_name"
+                android:id="@+id/mainPlayer_name"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="20dp"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="40dp"
-                app:layout_constraintLeft_toRightOf="@+id/player_image"
-                app:layout_constraintTop_toTopOf="@+id/player_image"
+                app:layout_constraintLeft_toRightOf="@+id/mainPlayer_image"
+                app:layout_constraintTop_toTopOf="@+id/mainPlayer_image"
                 tools:text="Amin" />
 
 
             <TextView
-                android:id="@+id/player_class"
+                android:id="@+id/mainPlayer_class"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:layout_marginTop="60dp"
                 android:textSize="15sp"
                 android:textStyle="italic"
-                android:layout_marginTop="60dp"
-                android:layout_marginLeft="40dp"
-                app:layout_constraintLeft_toRightOf="@+id/player_image"
-                app:layout_constraintTop_toTopOf="@+id/player_image"
+                app:layout_constraintLeft_toRightOf="@+id/mainPlayer_image"
+                app:layout_constraintTop_toTopOf="@+id/mainPlayer_image"
                 tools:text="classe: wesh wesh" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -59,8 +59,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_players"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
-    </androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintTop_toBottomOf="@id/mainPlayer"></androidx.recyclerview.widget.RecyclerView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
